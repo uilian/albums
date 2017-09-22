@@ -1,19 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 
+const AlbumDetail = (props) => {
+  return (
+    <Card>
+      <CardSection>
+        <View>
+        </View>
+        <View style={styles.descriptionStyle}>
+          <Text>{props.album.title}</Text>
+          <Text>{props.album.artist}</Text>
+        </View>
+      </CardSection>
+    </Card>
+  );
+};
 
-class AlbumDetail extends Component {
-  render() {
-    return (
-      <Card>
-        <CardSection>
-          <Text>{this.props.album.title}</Text>
-        </CardSection>
-      </Card>
-    );
+const styles = {
+  descriptionStyle: {
+    flexDirection: 'column',
+    justifyContent: 'space-around'
   }
-}
+};
 
 export default AlbumDetail;
