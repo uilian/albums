@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 
-
-class Card extends Component {
-  render() {
-    return (
-      <View style={styles.containerStyle}>
-        {this.props.children}
-      </View>
-    );
-  }
-}
+const Card = (props) => {
+  return (
+    <View style={styles.containerStyle}>
+      {props.children}
+    </View>
+  );
+};
 
 const styles = {
   containerStyle: {
