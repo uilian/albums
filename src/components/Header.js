@@ -31,8 +31,7 @@ const styles = {
   textStyle: {
     fontSize: 20
   }
-
-}
+};
 
 // make the component available
 export default Header;
